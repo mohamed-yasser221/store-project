@@ -1,23 +1,20 @@
-import React, { useEffect, useState } from 'react'
-import ProfStyles from './prof.module.css'
-// import NavBar from '../../Nav/NavBar'
-import { DotLoader } from 'react-spinners/ClipLoader'
-const Profile = () => {
-    const [load,setLoad]=useState(false)
-    useEffect(()=>{
-        setLoad(true)
-        setTimeout(() => {
-            setLoad(false)
-        }, 5000);
-        
-    }, [])
-  return (
-    <>
-    {/* {
-        load? <DotLoader /> : <h1>hellloooooooo</h1>
-    } */}
-    </>
-  )
-}
+import React, { useEffect, useState } from "react";
+import { DotLoader } from "react-spinners";
 
-export default Profile
+const Profile = () => {
+  const [load, setLoad] = useState(false);
+
+  useEffect(() => {
+    setLoad(true);
+
+    const timer = setTimeout(() => {
+      setLoad(false);
+    }, 5000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  return <>{load ? <DotLoader /> : <h1>Hello</h1>}</>;
+};
+
+export default Profile;

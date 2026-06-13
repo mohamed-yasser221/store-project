@@ -1,26 +1,28 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from "react";
 
 const Load = () => {
-    const [load,setLoad]=useState(true)
-        setTimeout(function(){
-            <>
-            setLoad(false)
-            
-<div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
-</>
-        },3000)
+  const [load, setLoad] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoad(false);
+    }, 3000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <div>
-      {
-        load?<div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
-        :undefined
-      }
+      {load && (
+        <div className="lds-ellipsis">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      )}
     </div>
-  )
-}
+  );
+};
 
-    setTimeout(function(){
-<div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
-
-        },3000)
-export default Load
+export default Load;
