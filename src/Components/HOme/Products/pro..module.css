@@ -1,0 +1,110 @@
+/* red:#ff344e */
+.cont{
+    width: 100%;
+    min-height: 100vh;
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+.cont span{
+    width: 50px;
+    height: 1px;
+    background-color:#ff344e ;
+}
+.cont .products{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    flex-wrap: wrap;
+} 
+.cont h1{
+    font-size: 30px;
+}
+.cont .products .product{
+    width: 250px;
+    position: relative;
+    margin: auto;
+    height: 350px;
+    border: #55595b 1px solid;
+    /* padding: 5px 5px; */
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.cont .products .product::before{
+    content: '';
+    width: 100%;
+    position: absolute;
+    height: 0;
+    background-color: #51575a32;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 999;
+    transition: .8s;
+
+}
+.cont .products .product .sora{
+    position: relative;
+    width: 100%;
+    height: 175px;
+}
+.cont .products .product img{
+    width: 100%;
+    height: 175px;
+    
+}
+.cont .products .product .text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.cont .products .product .text h5{
+    max-width: 90%;
+    margin: auto;
+}
+.cont .products .product .text p{
+    color: #ff344e;
+    font-weight: 500;
+}
+
+.cont .products .product:hover::before{
+    height: 190px;
+}
+.cont .products .product .text button{
+    position: relative;
+    margin-top: -15px;
+    width: 125px;
+    height: 25px;
+    cursor: pointer;
+    background-color: transparent;
+    border: #ff344e 1px solid;
+    border-radius: 7px;
+    transition: .5s;
+}
+.cont .products .product .text button::before{
+    content: "";
+    background-color: #ff344e;
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 7px;
+    z-index: -1;
+    /* transform: translate(-50%,-50%); */
+    transition: .8s;
+}
+.cont .products .product .text button:hover::before{
+    width: 100%;
+}

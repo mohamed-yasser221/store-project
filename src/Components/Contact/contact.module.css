@@ -1,0 +1,162 @@
+.contact{
+    width: 100%;
+    min-height: 100vh;
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+}
+.wag{
+    width: 100%;
+    min-height: 150px;
+    background-color: rgba(219, 217, 217, 0.367);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.wag h1{
+    font-size: 30px;
+    font-weight: 400;
+}
+.wag .st{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+.wag .st a{
+    color: black;
+    transition: .9s;
+}
+.wag .st a:hover{
+    color: #ff344e;
+}
+.carts{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+}
+.carts .cart{
+    width: 320px;
+    height: 200px;
+    box-shadow: 0 0 20px 5px rgba(168, 168, 168, 0.413);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    flex-direction: column;
+}
+.carts .cart span{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: #ff344e 1px solid;
+    transition: .9s;
+}
+.cart span .sora{
+    position: absolute;
+    z-index: 1;
+}
+.cart span .sora:hover{
+    color: white !important;
+}
+/* .cart span .dot{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #ff344e;
+    z-index: -1;
+    border-radius: 50%;
+} */
+.cart span::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    background-color: #ff344e;
+    z-index: -1;
+    border-radius: 50%;
+    transition: .9s;
+}
+.cart span:hover::before{
+    width: 100%;
+    /* height: 100%; */
+}
+.cart h3{
+    font-weight: 400;
+}
+.cart p{
+    color: rgba(127, 125, 125, 0.906);
+}
+
+.lds-ellipsis,
+.lds-ellipsis div {
+  box-sizing: border-box;
+}
+.lds-ellipsis {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-ellipsis div {
+  position: absolute;
+  top: 33.33333px;
+  width: 13.33333px;
+  height: 13.33333px;
+  border-radius: 50%;
+  background: currentColor;
+  animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+.lds-ellipsis div:nth-child(1) {
+  left: 8px;
+  animation: lds-ellipsis1 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(2) {
+  left: 8px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(3) {
+  left: 32px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(4) {
+  left: 56px;
+  animation: lds-ellipsis3 0.6s infinite;
+}
+@keyframes lds-ellipsis1 {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes lds-ellipsis3 {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes lds-ellipsis2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(24px, 0);
+  }
+}
+
+

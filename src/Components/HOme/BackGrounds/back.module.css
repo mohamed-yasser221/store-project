@@ -1,0 +1,118 @@
+.Background{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    top: 60px;
+    left: 0;
+}
+.Background img{
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    right: 20px;
+    top: 20%;
+    
+}
+.Background .text{
+    position: absolute;
+    width: 100%;
+    height: 100%;;
+    right: 15%;
+    top: 25%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-left: 55px;
+    
+}
+.Background .text p{
+    max-width: 50%;
+    font-size: 25px;
+}
+.Background .text h2{
+    max-width: 50%;
+    font-size: 30px;
+}
+.Background .text .loream{
+    max-width: 50%;
+
+    text-align: center;
+    font-size: 15px;
+}
+.Background .text button{
+    width: 120px;
+    height: 40px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 30px;
+    border: #ff344e 2px solid;
+    background-color: transparent;
+    color: #ff344e;
+    cursor: pointer;
+    transition: .8s ;
+    z-index: 9;
+}
+.Background .text button:hover{
+    color: white;
+}
+.Background .text button::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0%;
+    border-radius: 10% 10% 0 0;
+    background-color: #ff344e;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: .5s;
+}
+.Background .text button:hover:before{
+    height: 100%;
+}
+.Background .text .changer{
+display: flex;
+position: absolute;
+justify-content: center;
+align-items:center;
+bottom: 30%;
+left: 70%;
+gap: 10px;
+/* flex-direction: column; */
+}
+
+.Background .text .changer span{
+    
+    background-color: #333;
+    border-radius: 100%;
+    width: 10px;
+    height: 10px;
+    /* background-clip: inherit; */
+    border: 0;
+    margin: 8px;
+    position: relative;
+    cursor: pointer;
+}
+.Background .text .changer .active{
+    background-color: #ff344e;
+}
+::marker {
+    unicode-bidi: isolate;
+    font-variant-numeric: tabular-nums;
+    text-transform: none;
+    text-indent: 0px !important;
+    text-align: start !important;
+    /* text-align-last: start !important; */
+}
+.Background .text .changer span::before{
+    content: "";
+    position: absolute;
+    border-radius: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    border: 2px solid #333;
+    margin: -4px;
+}
